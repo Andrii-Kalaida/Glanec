@@ -1,0 +1,62 @@
+.novelty {
+  width: 100%;
+  height: 785px;
+  background-image: url(/images/bed.png);
+  margin-top: 120px;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 462px;
+    height: 670px;
+    border-left: 15px solid #44C697;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 100px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 100%;
+    color: $text-color-dark;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 125%;
+    margin-top: 50px;
+    color: $text-color-dark;
+  }
+
+  &__description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 125%;
+    margin: 10px 0 30px;
+    color: $text-color-dark;
+  }
+
+  &__button {
+    @include header-font;
+    width: 209px;
+    height: 51px;
+    border: none;
+    padding: 14px 46px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #44C697;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      background: #1f9469;
+    }
+  }
+}
