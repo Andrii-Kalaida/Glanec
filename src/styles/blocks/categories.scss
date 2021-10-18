@@ -1,5 +1,9 @@
 .categories {
-
+  &__title-background {
+    &:first-letter {
+      background: linear-gradient(90deg, #44c697 50%, transparent 50%);
+    }
+  }
   &__title {
     font-style: normal;
     font-weight: bold;
@@ -8,14 +12,6 @@
     margin-top: 30px;
     text-align: center;
     color: $text-color-dark;
-    border-left: 20px solid #44C697;
-
-    &::after {
-      content: '';
-      width: 20px;
-      background-color: #44C697;
-      position: absolute;
-    }
   }
 
   &__product-wrapper {
@@ -36,15 +32,13 @@
     @include categories-font;
     text-transform: uppercase;
 
-    &:focus {
+    &:hover {
       border-bottom: 3px solid #44C697;
     }
-    
   }
 
   &__img {
-
-    &:focus {
+    &:hover {
       fill: #44C697;
     }
   }
@@ -58,6 +52,55 @@
 
   &__goods-block {
     max-width: 100%;
+    position: relative;
+    &:hover {
+      background: #44c697;
+    }
+  }
+
+  &__novelty {
+    @include flex-position-center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+    width: 119px;
+    height: 33px;
+    background-color: #1E2E36;
+    color: #fff;
+  }
+
+  &__novelty-hit {
+    width: 143px;
+    height: 33px;
+    @include flex-position-center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+    background-color: #1E2E36;
+    color: #fff;
+  }
+
+  &__novelty-action {
+    width: 84px;
+    height: 33px;
+    @include flex-position-center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 53px;
+    background-color: #ff1b1b;
+    color: #fff;
   }
 
   &__goods-link {
@@ -66,5 +109,45 @@
 
   &__goods-img {
     // width: 446px;
+  }
+
+  &__bads {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bad-name {
+    @include categories-font;
+    text-transform: uppercase;
+  }
+
+  &__bad-price {
+    @include categories-font;
+    text-transform: uppercase;
+  }
+
+  &__button-position {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    width: 180px;
+    height: 51px;
+    margin-top: 50px;
+    @include header-font;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background: #44c697;
+    color: #fff;
+
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      background: #1f9469;
+    }
   }
 }
